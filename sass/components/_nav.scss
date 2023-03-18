@@ -1,0 +1,92 @@
+@import "../utils/vars";
+
+.nav-line {
+	border-bottom: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: $navLineColor;
+}
+.container-nav {
+	display: flex;
+	align-items: center;
+}
+.header-nav {
+	display: flex;
+	text-align: center;
+}
+
+.nav-list {
+	display: flex;
+	gap: 46px;
+	margin-left: 93px;
+	align-items: center;
+}
+.contact-list {
+	display: flex;
+	gap: 50px;
+	margin-left: auto;
+}
+.nav-link {
+	text-decoration: none;
+	color: $mainFontColor;
+	font-weight: 500;
+	line-height: 1.14;
+	letter-spacing: 0.02em;
+	display: block;
+	padding-top: 32px;
+	position: relative;
+	transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.nav-link-center {
+	padding-bottom: 32px;
+}
+.nav-link:hover {
+	color: $mainBlueColor;
+	transform: scale(1.15);
+}
+.nav-link:focus {
+	color: $mainBlueColor;
+	transform: scale(1.15);
+}
+.nav-link2 {
+	text-decoration: none;
+	font-weight: 500;
+	line-height: 1.14;
+	letter-spacing: 0.02em;
+	color: $imagesFontColor;
+	fill: currentColor;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-link2:hover {
+	color: $mainBlueColor;
+	transform: scale(1.15);
+}
+.nav-link2:focus {
+	color: $mainBlueColor;
+	transform: scale(1.15);
+}
+.addres-color-pointer:hover {
+	color: $mainBackgroundColor;
+}
+.current {
+	color: $mainBlueColor;
+}
+.current::after {
+	content: "";
+	display: block;
+	border-bottom: 4px solid $mainBlueColor;
+	padding-bottom: 28px;
+}
+.icon-envelope {
+	margin-right: 10px;
+	width: 16px;
+	height: 12px;
+}
+.icon-smartphone {
+	margin-right: 10px;
+	width: 10px;
+	height: 16px;
+}
