@@ -1,11 +1,12 @@
 @use "./utils/vars";
 
-@import "../sass/components/base";
-@import "../sass/components/container";
-@import "../sass/components/logo";
-@import "../sass/components/page-header";
-@import "../sass/components/visually-hidden";
-@import "../sass/components/is-hidden";
+@import "../sass/utils/base";
+@import "../sass/utils/container";
+@import "../sass/utils/logo";
+@import "../sass/utils/page-header";
+@import "../sass/utils/visually-hidden";
+@import "../sass/utils/is-hidden";
+@import "../sass/utils/backdrop";
 
 @import "../sass/components/navigation";
 @import "../sass/components/footer";
