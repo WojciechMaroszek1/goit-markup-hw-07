@@ -1,31 +1,26 @@
 @import "../utils/vars";
 
-.nav-line {
+.navigation {
 	border-bottom: 1px;
 	border-bottom-style: solid;
 	border-bottom-color: $navLineColor;
 }
-.container-nav {
+.navigation__container {
 	display: flex;
 	align-items: center;
 }
-.header-nav {
+.navigation__header {
 	display: flex;
 	text-align: center;
 }
 
-.nav-list {
+.navigation__menu-list {
 	display: flex;
 	gap: 46px;
 	margin-left: 93px;
 	align-items: center;
 }
-.contact-list {
-	display: flex;
-	gap: 50px;
-	margin-left: auto;
-}
-.nav-link {
+.navigation__menu-text {
 	text-decoration: none;
 	color: $mainFontColor;
 	font-weight: 500;
@@ -35,19 +30,34 @@
 	padding-top: 32px;
 	position: relative;
 	transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+	&:hover,
+	&:focus {
+		color: $mainBlueColor;
+		transform: scale(1.15);
+	}
 }
-.nav-link-center {
+
+.navigation__menu-text--current {
+	color: $mainBlueColor;
+
+	&::after {
+		content: "";
+		display: block;
+		border-bottom: 4px solid $mainBlueColor;
+		padding-bottom: 28px;
+	}
+}
+.navigation__menu-text--center {
 	padding-bottom: 32px;
 }
-.nav-link:hover {
-	color: $mainBlueColor;
-	transform: scale(1.15);
+.navigation__contact-list {
+	display: flex;
+	gap: 50px;
+	margin-left: auto;
 }
-.nav-link:focus {
-	color: $mainBlueColor;
-	transform: scale(1.15);
-}
-.nav-link2 {
+
+.navigation__contact-text {
 	text-decoration: none;
 	font-weight: 500;
 	line-height: 1.14;
@@ -58,34 +68,20 @@
 	align-items: center;
 	justify-content: center;
 	transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+	&:hover,
+	&:focus {
+		color: $mainBlueColor;
+		transform: scale(1.15);
+	}
 }
 
-.nav-link2:hover {
-	color: $mainBlueColor;
-	transform: scale(1.15);
-}
-.nav-link2:focus {
-	color: $mainBlueColor;
-	transform: scale(1.15);
-}
-.addres-color-pointer:hover {
-	color: $mainBackgroundColor;
-}
-.current {
-	color: $mainBlueColor;
-}
-.current::after {
-	content: "";
-	display: block;
-	border-bottom: 4px solid $mainBlueColor;
-	padding-bottom: 28px;
-}
-.icon-envelope {
+.navigation__contact-icon-envelope {
 	margin-right: 10px;
 	width: 16px;
 	height: 12px;
 }
-.icon-smartphone {
+.navigation__contact-icon-smartphone {
 	margin-right: 10px;
 	width: 10px;
 	height: 16px;

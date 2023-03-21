@@ -1,18 +1,18 @@
 @import "../utils/vars";
 
-.deal-box {
+.destiny {
+	padding-top: 0px;
+}
+.destiny__card-container {
 	display: flex;
 	flex-direction: row;
 	gap: 30px;
 }
-.deal-design {
-	padding-top: 0px;
-}
-.deal-image-box {
+.destiny__card-image-box {
 	position: relative;
 }
 
-.deal-text-box {
+.destiny__card-text {
 	font-weight: 700;
 	color: $mainBackgroundColor;
 	line-height: 1.14em;

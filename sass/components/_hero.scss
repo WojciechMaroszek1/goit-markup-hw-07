@@ -1,6 +1,6 @@
 @import "../utils/vars";
 
-.hero-background {
+.hero {
 	max-width: 1600px;
 	height: 600px;
 	background-size: cover;
@@ -9,7 +9,7 @@
 	padding-bottom: 200px;
 	background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../images/hero-background.jpg");
 }
-.hero-header {
+.hero__header {
 	color: $mainBackgroundColor;
 	width: 696px;
 	font-weight: 900;
@@ -21,40 +21,28 @@
 	margin: auto;
 	margin-bottom: 40px;
 }
-.hero-button {
+.hero__btn {
 	width: 200px;
+	margin: auto;
+	padding: 12px 42px;
+
 	background-color: $mainBlueColor;
 	color: $mainBackgroundColor;
+
+	font-family: $mainFont;
 	font-weight: 700;
 	font-size: 14px;
 	line-height: 1.87;
 	text-align: center;
 	letter-spacing: 0.06em;
-	cursor: pointer;
-	font-family: $mainFont;
-	margin: auto;
-	padding: 12px 42px;
 
 	transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.hero-button:hover {
-	transform: scale(1.15);
-}
 
-.modal {
-	width: 528px;
-	height: 581px;
-	background-color: $mainBackgroundColor;
-	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-	border-radius: 4px;
-	padding: 40px;
-
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+	&:hover {
+		transform: scale(1.15);
+	}
 }
-.backdrop {
+.hero__backdrop {
 	width: 100%;
 	height: 100%;
 	position: fixed;
@@ -66,180 +54,4 @@
 	transition-property: visibility, opacity, transform;
 	transition-duration: 700ms;
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-.modal-btn {
-	width: 18px;
-	height: 18px;
-}
-.modal-btn-bg {
-	width: 30px;
-	height: 30px;
-	position: absolute;
-	right: 8px;
-	top: 8px;
-
-	display: flex;
-	justify-content: center;
-	align-items: center;
-
-	border-radius: 50%;
-	border: 1px solid rgba(0, 0, 0, 0.1);
-	background-color: $mainBackgroundColor;
-	fill: $mainFontColor;
-	transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
-		background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.modal-btn-bg:hover {
-	transform: scale(1.25);
-	background-color: $mainBlueColor;
-	fill: $mainBackgroundColor;
-}
-.contact-form-box {
-	display: flex;
-	flex-direction: column;
-	gap: 10px;
-}
-.contact-form-input-box {
-	position: relative;
-	margin-top: 4px;
-}
-.contact-form-tittle {
-	font-weight: 700;
-	font-size: 20px;
-	line-height: 1.15em;
-	letter-spacing: 0.03em;
-	color: $mainFontColor;
-	margin-bottom: 12px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-.contact-form-input {
-	width: 100%;
-	height: 40px;
-	border: 1px solid rgba(33, 33, 33, 0.2);
-	border-radius: 4px;
-	padding-left: 42px;
-}
-.contact-form-text {
-	font-size: 12px;
-	line-height: 1.16em;
-	letter-spacing: 0.01em;
-	color: $imagesFontColor;
-}
-.contact-form-icons {
-	width: 18px;
-	height: 18px;
-	position: absolute;
-	left: 12px;
-	top: 50%;
-	transform: translateY(-50%);
-
-	fill: $mainFontColor;
-}
-.contact-form-input:focus {
-	outline: none;
-	border: 1px solid $mainBlueColor;
-}
-.contact-form-input:focus + .contact-form-icons {
-	fill: $mainBlueColor;
-}
-
-.contact-form-input-comment {
-	width: 100%;
-	height: 120px;
-	border: 1px solid rgba(33, 33, 33, 0.2);
-	border-radius: 4px;
-	padding-top: 12px;
-	padding-left: 16px;
-	padding-right: 16px;
-	padding-bottom: 12px;
-}
-.contact-form-input-comment:focus {
-	outline: none;
-	border: 1px solid $mainBlueColor;
-}
-
-.contact-form-policy-box {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	gap: 7px;
-	margin-top: 20px;
-	margin-bottom: 30px;
-}
-.check__input {
-	position: absolute;
-	clip: rect(0 0 0 0);
-	width: 1px;
-	height: 1px;
-	margin: -1px;
-}
-
-.check__box {
-	cursor: pointer;
-	width: 16px;
-	height: 15px;
-	border-radius: 2px;
-	background-color: $mainBackgroundColor;
-	background-repeat: no-repeat;
-	overflow: hidden;
-	background-position: 50% 50%;
-	box-shadow: 0 0 0 0.1em $mainBlueColor;
-}
-
-/* Checked */
-
-.check__input:checked + .check__box {
-	background-color: $mainBlueColor;
-	background-image: url(../images/icon_check.jpg);
-}
-
-/* Focused */
-
-.check__input:focus + .check__box {
-	box-shadow: 0 0 0 0.1em $mainBlueColor, 0 0 0 0.2em #7ed321;
-}
-/* Disabled */
-
-.check__input:disabled + .check__box {
-	box-shadow: 0 0 0 0.1em #9b9b9b;
-}
-
-.check__input:checked:disabled + .check__box {
-	background-color: #9b9b9b;
-}
-.contact-form-policy-text {
-	line-height: 1.714em;
-	letter-spacing: 0.03em;
-	color: $imagesFontColor;
-}
-.contact-form-policy-text-special {
-	line-height: 1.714em;
-	letter-spacing: 0.03em;
-	text-decoration: underline;
-	color: $mainBlueColor;
-}
-.contact-form-btn {
-	background: $mainBlueColor;
-	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-	border-radius: 4px;
-	margin: 0 auto;
-	border: 1px solid transparent;
-	padding: 10px 76px 10px 76px;
-
-	font-weight: 700;
-	font-size: 16px;
-	line-height: 1.875em;
-	letter-spacing: 0.06em;
-	color: $mainBackgroundColor;
-
-	transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-		border 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.contact-form-btn:hover {
-	transform: scale(1.1);
-	background-color: $mainBackgroundColor;
-	border: solid 1px $mainBlueColor;
-	color: $mainFontColor;
 }
